@@ -22,10 +22,10 @@ class Control:
 
     def enlazar(self, tv):
         self.__tv=tv
-        self.__tv.set_Control(self)
+        self.__tv.setControl(self)
 
     def set_Canal(self, canal: int):
-        self.__tv.set_Canal(canal)
+        self.__tv.setCanal(canal)
 
     def get_Tv(self):
         return self.__tv

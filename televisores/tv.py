@@ -15,10 +15,10 @@ class TV:
         TV.numTV +=1
 
     @staticmethod
-    def get_NumTV():
+    def getNumTV():
         return TV.numTV
     @staticmethod
-    def set_NumTV(numTV:int):
+    def setNumTV(numTV:int):
         TV.numTV=numTV
 ################################################################
     def turnOn(self):
@@ -27,29 +27,29 @@ class TV:
     def turnOff(self):
         self.__estado=False
 
-    def get_Estado(self):
+    def getEstado(self):
         return self.__estado
 ################################################################
-    def get_Marca(self):
+    def getMarca(self):
         return self.__marca
     
-    def set_Marca(self,marca ):
+    def setMarca(self,marca ):
         self.__marca=marca   
     
-    def get_Control(self):
+    def getControl(self):
         return self.__control
     
-    def set_Control(self,control ):
+    def setControl(self,control ):
         self.__control=control
     
-    def get_Precio(self):
+    def getPrecio(self):
         return self.__precio
     
-    def set_Precio(self,precio:int ):
+    def setPrecio(self,precio:int ):
         self.__precio=precio
 
 ##################################################################
-    def get_Volumen(self):
+    def getVolumen(self):
         return self.__volumen
     
     def set_Volumen(self,volumen:int ):
@@ -65,10 +65,10 @@ class TV:
             if (self.__volumen > 0 and self.__volumen <= 7):
                 self.__volumen -=1
 ###################################################################
-    def get_Canal(self):
+    def getCanal(self):
         return self.__canal
     
-    def set_Canal(self,canal:int ):
+    def setCanal(self,canal:int ):
         self.__canal=canal
 
     def canalUp(self):

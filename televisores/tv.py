@@ -2,16 +2,16 @@
 class TV:
     numTV=0
     def __init__(self,marca,estado):
-        self.__marca=marca
-        self.__canal=1
-        self.__precio=500
-        self.__estado=bool
-        self.__volumen=1
-        self.__control=None
+        self.marca=marca
+        self.canal=1
+        self.precio=500
+        self.estado=bool
+        self.volumen=1
+        self.control=None
 ##################################################################
     def TV(self,marca,estado:bool):
-        self.__marca=marca
-        self.__estado=estado
+        self.marca=marca
+        self.estado=estado
         TV.numTV +=1
 
     @staticmethod
@@ -22,61 +22,61 @@ class TV:
         TV.numTV=numTV
 ################################################################
     def turnOn(self):
-        self.__estado=True
+        self.estado=True
 
     def turnOff(self):
-        self.__estado=False
+        self.estado=False
 
     def getEstado(self):
-        return self.__estado
+        return self.estado
 ################################################################
     def getMarca(self):
-        return self.__marca
+        return self.marca
     
     def setMarca(self,marca ):
-        self.__marca=marca   
+        self.marca=marca   
     
     def getControl(self):
-        return self.__control
+        return self.control
     
     def setControl(self,control ):
-        self.__control=control
+        self.control=control
     
     def getPrecio(self):
-        return self.__precio
+        return self.precio
     
     def setPrecio(self,precio:int ):
-        self.__precio=precio
+        self.precio=precio
 
 ##################################################################
     def getVolumen(self):
-        return self.__volumen
+        return self.volumen
     
     def set_Volumen(self,volumen:int ):
-        self.__volumen=volumen
+        self.volumen=volumen
     
     def volumenUp(self):
-        if (self.__estado==True):
-            if (self.__volumen >= 0 and self.__volumen <7):
-                self.__volumen +=1
+        if (self.estado==True):
+            if (self.volumen >= 0 and self.volumen <7):
+                self.volumen +=1
     
     def volumenDown(self):
-        if (self.__estado==True):
-            if (self.__volumen > 0 and self.__volumen <= 7):
-                self.__volumen -=1
+        if (self.estado==True):
+            if (self.volumen > 0 and self.volumen <= 7):
+                self.volumen -=1
 ###################################################################
     def getCanal(self):
-        return self.__canal
+        return self.canal
     
     def setCanal(self,canal:int ):
-        self.__canal=canal
+        self.canal=canal
 
     def canalUp(self):
-        if (self.__estado==True):
-            if (self.__canal >= 1 and self.__canal < 120):
-                self.__canal +=1
+        if (self.estado==True):
+            if (self.canal >= 1 and self.canal < 120):
+                self.canal +=1
     
     def canalDown(self):
-        if (self.__estado==True):
-            if (self.__canal > 1 and self.__canal <= 120):
-                self.__canal -=1
+        if (self.estado==True):
+            if (self.canal > 1 and self.canal <= 120):
+                self.canal -=1

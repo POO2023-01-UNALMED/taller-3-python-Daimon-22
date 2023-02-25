@@ -1,14 +1,15 @@
+
 class TV:
     numTV=0
-    def __init__(self):
-        self.__marca=Marca
+    def __init__(self,marca,estado):
+        self.__marca=marca
         self.__canal=1
         self.__precio=500
-        self.__estado
+        self.__estado=bool
         self.__volumen=1
-        self.__control=Control
+        self.__control=None
 ##################################################################
-    def TV(self,marca:Marca,estado:bool()):
+    def TV(self,marca,estado:bool):
         self.__marca=marca
         self.__estado=estado
         TV.numTV +=1
@@ -32,13 +33,13 @@ class TV:
     def get_Marca(self):
         return self.__marca
     
-    def set_Marca(self,marca:Marca ):
+    def set_Marca(self,marca ):
         self.__marca=marca   
     
     def get_Control(self):
         return self.__control
     
-    def set_Control(self,control:Control ):
+    def set_Control(self,control ):
         self.__control=control
     
     def get_Precio(self):

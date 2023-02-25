@@ -24,11 +24,11 @@ class Control:
         self.tv=tv
         self._tv.setControl(self)
 
-    def set_Canal(self, canal: int):
+    def setCanal(self, canal: int):
         self._tv.setCanal(canal)
 
-    def get_Tv(self):
+    def getTv(self):
         return self._tv
 
-    def set_Tv(self, tv):
+    def setTv(self, tv):
         self._tv= tv        

@@ -5,15 +5,11 @@ class TV:
         self.marca=marca
         self.canal=1
         self.precio=500
-        self.estado=bool
+        self.estado=estado
         self.volumen=1
         self.control=None
-##################################################################
-    def TV(self,marca,estado:bool):
-        self.marca=marca
-        self.estado=estado
         TV.numTV +=1
-
+##################################################################
     def getNumTV():
         return TV.numTV
     def setNumTV():

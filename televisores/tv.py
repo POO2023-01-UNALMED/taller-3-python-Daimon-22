@@ -14,12 +14,9 @@ class TV:
         self.estado=estado
         TV.numTV +=1
 
-    @staticmethod
     def getNumTV():
         return TV.numTV
-    @staticmethod
-    def setNumTV(numTV:int):
-        TV.numTV=numTV
+
 ################################################################
     def turnOn(self):
         self.estado=True
@@ -52,8 +49,10 @@ class TV:
     def getVolumen(self):
         return self.volumen
     
-    def set_Volumen(self,volumen:int ):
-        self.volumen=volumen
+    def setVolumen(self,volumen:int ):
+        if (self.estado==True):
+            if (self.volumen >= 0 and self.volumen <=7):
+                self.volumen=volumen
     
     def volumenUp(self):
         if (self.estado==True):
@@ -69,7 +68,9 @@ class TV:
         return self.canal
     
     def setCanal(self,canal:int ):
-        self.canal=canal
+        if (self.estado==True):
+            if (self.canal >= 1 and self.canal <= 120):
+                self.canal=canal
 
     def canalUp(self):
         if (self.estado==True):

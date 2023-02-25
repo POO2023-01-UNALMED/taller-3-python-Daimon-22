@@ -24,7 +24,7 @@ class Control:
         self._tv=tv
         self._tv.setControl(self)
 
-    def setCanal(self, canal: int):
+    def setCanal(self, canal):
         self._tv.setCanal(canal)
 
     def getTv(self):
